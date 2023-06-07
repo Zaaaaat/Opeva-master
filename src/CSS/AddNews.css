@@ -1,0 +1,26 @@
+.rect-form input, .rect-form textarea{
+    height: 50px;
+}
+
+@media screen and (max-width: 1225px)
+{
+    .form-container{
+        display: inline;
+    }
+}
+
+.radio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.radio input{
+    margin-bottom: 5px;
+}
+
+.radio label{
+    margin-right: 10px;
+}
+
+

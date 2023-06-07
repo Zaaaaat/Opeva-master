@@ -1,0 +1,61 @@
+.deliverables-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.h1-Contain {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.wp-title {
+    font-size: 3rem;
+    color: #16436f;
+    font-weight: 900;
+    font-family: 'DM Sans', sans-serif;
+    padding-bottom: 5px;
+}
+
+.name{
+    color: #00c2ff;
+    text-decoration: none;
+    font-style: normal;
+}
+
+.d-title {
+    font-size: 1.2rem;
+    color: gray;
+}
+
+.deliverable ul{
+    font-style: italic;
+    color: #888888;
+}
+
+li{
+    padding-bottom: 5px;
+}
+
+/* Styles pour les écrans ayant une largeur inférieure à 1225px */
+@media screen and (max-width: 1224px) {
+    .deliverables-container {
+        width: 80%;
+    }
+
+    .h1-Contain {
+        margin-bottom: 50px;
+    }
+
+    .wp-title {
+        font-size: 32px;
+    }
+
+    .d-title {
+        font-size: 18px;
+    }
+}
+

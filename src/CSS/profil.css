@@ -1,0 +1,57 @@
+/* profil.css */
+.profil-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.profil-section {
+    flex: 1;
+    padding-bottom: 2rem;
+}
+
+.form-pwd{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.profil-info {
+    margin-top: 20px;
+}
+
+.update-section {
+    flex: 1;
+}
+
+.form-input {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+}
+
+.forgot-password {
+    margin-top: 10px;
+    color: red;
+    cursor: pointer;
+}
+
+h1{
+    color: #002C4B;
+}
+
+.profil-allcontainer{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
