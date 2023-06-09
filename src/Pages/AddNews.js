@@ -18,7 +18,7 @@ function AddNews() {
     const [imageUpload, setImageUpload] = useState(null);
     const [imageURL, setImageURL] = useState("");
     const currentDate = format(new Date(), 'yyyy-MM-dd HH:mm:ss');
-    const [newsArray, setNewsArray] = useState([]); // Ajout du state pour les news
+    const [newsArray, setNewsArray] = useState([]);
 
     useEffect(() => {
         listAll(storageRef(storage, "images/")).then((response) => {
@@ -29,7 +29,6 @@ function AddNews() {
             });
         },[newsArray]);
 
-        // Récupérer les données de la base de données pour les news
         const newsRef = ref(database, "news");
         const getNewsData = async () => {
             const snapshot = await database.ref(newsRef).once("value");
@@ -52,7 +51,7 @@ function AddNews() {
     function addNews(imageURL, description, title, type) {
         const newsRef = ref(database, "news");
         const newNewsRef = push(newsRef);
-        const newsID = newNewsRef.key; // Récupérer la clé générée par push
+        const newsID = newNewsRef.key;
 
         const currentDate = new Date().toISOString();
 

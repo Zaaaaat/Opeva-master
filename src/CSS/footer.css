@@ -39,6 +39,17 @@ footer h3{
     flex-direction: column;
 }
 
+.footer-press{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-press a{
+    display: flex;
+    flex-direction: column;
+    color: rgb(200, 255, 237);
+}
+
 .footer-items{
     display: flex;
     flex-direction: column;

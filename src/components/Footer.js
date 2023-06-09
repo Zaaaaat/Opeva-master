@@ -3,7 +3,7 @@ import '../CSS/footer.css';
 import bpi from "../Images/bpi.png";
 import europe from "../Images/europe.png";
 import suisse from "../Images/suisse.png";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Footer() {
     const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isLoggedIn") === "true");
@@ -34,21 +34,25 @@ function Footer() {
                         <h3>Partially Funded By:</h3>
                         <div className="footer-sectionblock">
                             <div className="footer-section3">
-                                <img src={bpi} alt="Image 1" />
+                                <img src={bpi} alt="bpi 1" />
                             </div>
                             <div className="footer-section4">
-                                <img src={europe} alt="Image 2" />
+                                <img src={europe} alt="europe 2" />
                             </div>
                         </div>
                     </div>
                     <div className="footer-section2">
-                        <img src={suisse} alt="Image 3" />
+                        <img src={suisse} alt="suisse 3" />
                     </div>
                 </div>
             </div>
 
             <div className="footer-bar">
+                <div className="footer-press">
                 <p>OPEVA - OPtimization of Electric Vehicle Autonomy</p>
+                <a href="https://drive.google.com/file/d/1iLctdFMaVSUl-BOoxylbdQV14N2GJpud/view?usp=sharing" target="_blank" rel="noopener noreferrer">PRESS RELEASE</a>
+
+                </div>
                 {isLoggedIn ? (
                         <ul>
                             <li>

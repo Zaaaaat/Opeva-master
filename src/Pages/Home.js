@@ -7,21 +7,18 @@ import '../CSS/home.css';
 
 import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
+import PreFooter from '../components/PreFooter.js';
+
+
 import logo from "../Images/logo-opeva.jpg";
-import plus from "../Images/plus.png";
 import lab from "../Images/lab.png";
 import map from "../Images/map.png";
 import cal from "../Images/calendar.png";
 import top from "../Images/to_top.png";
 import stat from "../Images/stat.png";
 import cross from "../Images/cross.png";
-import ugeneve from "../Images/Partners/Ugeneve.png";
-import vub from "../Images/Partners/VUB.png";
-import ESOGU from "../Images/Partners/ESOGU.png";
-import UPerugia from "../Images/Partners/UPerugia.png";
-import ULR from "../Images/Partners/ULR.png";
-import UB from "../Images/Partners/UB.png";
-import UNIPR from "../Images/Partners/UNIPR.png";
+import plus from "../Images/plus.png";
+
 
 import { useNavigate } from "react-router-dom";
 
@@ -32,27 +29,6 @@ function Home(){
     const [latestNews, setLatestNews] = useState([]);
     const appRootRef = useRef(null);
 
-    const partnerImages = [
-        ESOGU,
-        UB,
-        ULR,
-        UNIPR,
-        UPerugia,
-        ugeneve,
-        vub,
-    ];
-
-    function shuffleArray(array) {
-        const newArray = [...array];
-        for (let i = newArray.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-        }
-        return newArray;
-    }
-
-    const shuffledImages = shuffleArray(partnerImages);
-    const randomPartnerImages = shuffledImages.slice(0, 4);
 
 
     const handleNewsClick = (news) => {
@@ -114,6 +90,7 @@ function Home(){
 
                     <div className="image-text">
                         <p>Opeva European Project</p>
+                        
                     </div>
                 </div>
             </div>
@@ -281,49 +258,7 @@ function Home(){
                 </div>
             </section>
 
-
-            <section className="partner-section">
-                <div className="partner-container">
-
-                    <div className="titre-partenaires">
-                        <h2>Our Partners...</h2>
-                    </div>
-
-
-                    <div className="allsquares">
-                        {randomPartnerImages.map((image, index) => (
-                            <div className="square" key={index}>
-                                <a href="Partner">
-                                    <div className="img-squaree">
-                                        <img src={image} alt="my image" />
-                                    </div>
-                                    <div className="square-hover">
-                                        <img src={plus} alt="know more"/>
-                                        <span>More partners</span>
-                                    </div>
-                                </a>
-                            </div>
-                        ))}
-
-                        <div className="square">
-
-                            <div className="square-text">
-                            <div className="square-desc">
-                                    <p> See our partners</p>
-
-                                </div>
-                            </div>
-
-                            <div className="square-hover">
-                                <img src={plus} alt="know more"/>
-                                <span>More partners</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
+            <PreFooter/>
             <Footer/>
         </>
     )
